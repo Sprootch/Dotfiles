@@ -1,0 +1,1 @@
+/home/lapin/.config/omarchy/current/theme/neovim.lua
