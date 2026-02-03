@@ -6,7 +6,7 @@
     }
 
     layer-rule {
-        match namespace="^noctalia-wallpaper*"
+        match namespace="^mpvpaper*"
         place-within-backdrop true
     }
     
