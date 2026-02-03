@@ -15,8 +15,11 @@ binds {
     Mod+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     Mod+Shift+Q                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
-    // Please choose your own file manager.
+
+    // File manager
     Mod+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
+    // Yazi
+    Mod+N                               hotkey-overlay-title="Open Yazi" { spawn-sh "alacritty -e /usr/bin/yazi"; }
 
     // ─── Audio Controls ───
     XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
