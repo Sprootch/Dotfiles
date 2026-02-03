@@ -16,7 +16,7 @@ binds {
     Mod+Shift+Q                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
 
-    // File manager
+    // Explorer
     Mod+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
     // Yazi
     Mod+N                               hotkey-overlay-title="Open Yazi" { spawn-sh "alacritty -e /usr/bin/yazi"; }
@@ -58,6 +58,11 @@ binds {
     Mod+Shift+UP                        { focus-monitor-up; }
     Mod+Shift+Down                      { focus-monitor-down; }
 
+    Mod+Shift+H                         { consume-or-expel-window-left; }
+    Mod+Shift+J                         { move-window-down-or-to-workspace-down; }
+    Mod+Shift+K                         { move-window-up-or-to-workspace-up; }
+    Mod+Shift+L                         { consume-or-expel-window-right; }
+
     Mod+Shift+CTRL+Left                 { move-column-to-monitor-left; }
     Mod+Shift+CTRL+Right                { move-column-to-monitor-right; }
     Mod+Shift+CTRL+UP                   { move-column-to-monitor-up; }
@@ -79,21 +84,21 @@ binds {
     Mod+CTRL+Shift+WheelScrollDown      { move-column-right; }
     Mod+CTRL+Shift+WheelScrollUp        { move-column-left; }
 
-    Mod+1                               { focus-workspace 1; }
-    Mod+2                               { focus-workspace 2; }
-    Mod+3                               { focus-workspace 3; }
-    Mod+4                               { focus-workspace 4; }
-    Mod+5                               { focus-workspace 5; }
+    Mod+ampersand                       { focus-workspace 1; }
+    Mod+eacute                          { focus-workspace 2; }
+    Mod+quotedbl                        { focus-workspace 3; }
+    Mod+apostrophe                      { focus-workspace 4; }
+    Mod+parenleft                       { focus-workspace 5; }
     Mod+6                               { focus-workspace 6; }
     Mod+7                               { focus-workspace 7; }
     Mod+8                               { focus-workspace 8; }
     Mod+9                               { focus-workspace 9; }
 
-    Mod+CTRL+1                          { move-column-to-workspace 1; }
-    Mod+CTRL+2                          { move-column-to-workspace 2; }
-    Mod+CTRL+3                          { move-column-to-workspace 3; }
-    Mod+CTRL+4                          { move-column-to-workspace 4; }
-    Mod+CTRL+5                          { move-column-to-workspace 5; }
+    Mod+CTRL+ampersand                  { move-column-to-workspace 1; }
+    Mod+CTRL+eacute                     { move-column-to-workspace 2; }
+    Mod+CTRL+quotedbl                   { move-column-to-workspace 3; }
+    Mod+CTRL+apostrophe                 { move-column-to-workspace 4; }
+    Mod+CTRL+parenleft                  { move-column-to-workspace 5; }
     Mod+CTRL+6                          { move-column-to-workspace 6; }
     Mod+CTRL+7                          { move-column-to-workspace 7; }
     Mod+CTRL+8                          { move-column-to-workspace 8; }
@@ -102,13 +107,14 @@ binds {
     Mod+TAB                             { focus-workspace-previous; }
 
     // ─── Layout Controls ───
+    Mod+R                               { switch-preset-column-width; }
     Mod+CTRL+F                          { expand-column-to-available-width; }
     Mod+C                               { center-column; }
     Mod+CTRL+C                          { center-visible-columns; }
-    Mod+Minus                           { set-column-width "-10%"; }
-    Mod+Equal                           { set-column-width "+10%"; }
-    Mod+Shift+Minus                     { set-window-height "-10%"; }
-    Mod+Shift+Equal                     { set-window-height "+10%"; }
+    Mod+parenright                      { set-column-width "-10%"; }
+    Mod+Minus                           { set-column-width "+10%"; }
+    Mod+Shift+parenright                { set-window-height "-10%"; }
+    Mod+Shift+Minus                     { set-window-height "+10%"; }
 
     // ─── Modes ───
     Mod+T                               { toggle-window-floating; }

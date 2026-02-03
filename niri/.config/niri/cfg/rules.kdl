@@ -25,3 +25,9 @@
       open-on-workspace "music"
       open-maximized true
     }
+
+    switch-events {
+        //lid-close { spawn "notify-send" "The laptop lid is closed!"; }
+        //lid-open { spawn "notify-send" "The laptop lid is open!"; }
+        lid-close { spawn "bash" "-c" "qs -c noctalia-shell ipc call lockScreen lock"; }
+    }
