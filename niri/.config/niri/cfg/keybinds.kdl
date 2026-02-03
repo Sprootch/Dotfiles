@@ -11,15 +11,19 @@ binds {
     // ─── Applications ───
     Mod+Return                          hotkey-overlay-title="Open Terminal: Alacritty" { spawn "alacritty"; }
     Mod+Space                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Mod+B                               hotkey-overlay-title="Open Browser: brave" { spawn "brave"; }
     Mod+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     Mod+Shift+Q                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
-
+    // Browser
+    Mod+Shift+B                         hotkey-overlay-title="Open Browser: brave" { spawn "brave"; }
     // Explorer
-    Mod+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
+    Mod+Shift+F                         hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
     // Yazi
-    Mod+N                               hotkey-overlay-title="Open Yazi" { spawn-sh "alacritty -e /usr/bin/yazi"; }
+    Mod+Shift+N                         hotkey-overlay-title="Open Yazi" { spawn-sh "alacritty -e /usr/bin/yazi"; }
+    // Btop
+    Mod+Shift+A                         hotkey-overlay-title="Open Btop" { spawn-sh "alacritty -e /usr/bin/btop"; }
+    // Spotify
+    Mod+Shift+M                         hotkey-overlay-title="Open Spotify" { spawn "spotify"; }
 
     // ─── Audio Controls ───
     XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
