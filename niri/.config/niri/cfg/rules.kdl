@@ -1,4 +1,3 @@
-    workspace "music"
 
     window-rule {
         geometry-corner-radius 20 // Set every window radius to 20
@@ -21,13 +20,20 @@
     }
 
     window-rule {
+      match app-id="Ledger Wallet"
+      open-maximized true
+    }
+
+
+    /*window-rule {
       match app-id="spotify"
       open-on-workspace "music"
       open-maximized true
-    }
+    }*/
 
     switch-events {
         //lid-close { spawn "notify-send" "The laptop lid is closed!"; }
         //lid-open { spawn "notify-send" "The laptop lid is open!"; }
         lid-close { spawn "bash" "-c" "qs -c noctalia-shell ipc call lockScreen lock"; }
     }
+

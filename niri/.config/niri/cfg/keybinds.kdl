@@ -17,9 +17,9 @@ binds {
     // Browser
     Mod+Shift+B                         hotkey-overlay-title="Open Browser: brave" { spawn "brave"; }
     // Explorer
-    Mod+Shift+F                         hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
+    Mod+Shift+E                         hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
     // Yazi
-    Mod+Shift+N                         hotkey-overlay-title="Open Yazi" { spawn-sh "alacritty -e /usr/bin/yazi"; }
+    Mod+Shift+F                         hotkey-overlay-title="Open Yazi" { spawn-sh "alacritty -e /usr/bin/yazi"; }
     // Btop
     Mod+Shift+A                         hotkey-overlay-title="Open Btop" { spawn-sh "alacritty -e /usr/bin/btop"; }
     // Spotify
@@ -30,6 +30,9 @@ binds {
     XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
     XF86AudioMute                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
     XF86AudioMicMute                    allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
+
+    // Clipboard manager
+    Mod+V                               { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard" ;}
 
     // ─── Window Movement and Focus ───
     Mod+W                               { close-window; }
