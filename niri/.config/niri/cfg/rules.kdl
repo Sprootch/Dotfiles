@@ -24,6 +24,13 @@
       open-maximized true
     }
 
+    window-rule {
+      match app-id="localsend"
+      open-floating true
+      default-column-width { proportion 0.5; }
+      default-window-height { fixed 650; }
+    }
+
 
     /*window-rule {
       match app-id="spotify"
