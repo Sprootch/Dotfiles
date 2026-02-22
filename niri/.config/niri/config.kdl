@@ -109,6 +109,7 @@ layout {
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
+        proportion 1.0
         // Fixed sets the width in logical pixels exactly.
         // fixed 1920
     }
@@ -269,7 +270,7 @@ recent-windows {
 }
 
 // Startup 
-spawn-sh-at-startup "/home/lapin/Vidéos/AnimatedWallpapers/animated_wallpaper.sh &"
+spawn-sh-at-startup "/home/lapin/Vidéos/AnimatedWallpapers/animated_wallpaper.sh"
 
 // Include dms files
 include "dms/colors.kdl"
