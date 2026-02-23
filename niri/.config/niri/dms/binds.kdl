@@ -6,8 +6,10 @@ binds {
 
     // === Application Launchers ===
     Mod+Shift+B hotkey-overlay-title="Open Terminal" { spawn "brave"; }
+    Mod+Shift+D hotkey-overlay-title="wlr-which-key" { spawn "wlr-which-key"; }
+    Mod+Shift+Y hotkey-overlay-title="yazi" { spawn "alacritty" "-e" "yazi"; }
 
-    Mod+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
+    //Mod+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
     Mod+Return hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
     Mod+Space hotkey-overlay-title="Application Launcher" {
         spawn "dms" "ipc" "call" "spotlight" "toggle";
