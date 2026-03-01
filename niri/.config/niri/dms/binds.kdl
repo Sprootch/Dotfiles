@@ -7,7 +7,8 @@ binds {
     // === Application Launchers ===
     Mod+Shift+B hotkey-overlay-title="Open Terminal" { spawn "brave"; }
     Mod+Shift+D hotkey-overlay-title="wlr-which-key" { spawn "wlr-which-key"; }
-    Mod+Shift+Y hotkey-overlay-title="yazi" { spawn "alacritty" "-e" "yazi"; }
+    Mod+Shift+Y hotkey-overlay-title="yazi" { spawn "kitty" "-e" "yazi"; }
+    Mod+Shift+A hotkey-overlay-title="Animated wallpapers" { spawn "/home/lapin/w_pick.sh"; }
 
     //Mod+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
     Mod+Return hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
@@ -85,6 +86,7 @@ binds {
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
     Mod+Shift+T { toggle-window-floating; }
+    Mod+T { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
     Mod+Q { toggle-column-tabbed-display; }
     Mod+Shift+W hotkey-overlay-title="Create window rule" { spawn "dms" "ipc" "call" "window-rules" "toggle"; }
@@ -219,7 +221,7 @@ binds {
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
 
-    // === Screenshots ===
+    // === Screenshots ==
     XF86Launch1 { screenshot; }
     Ctrl+XF86Launch1 { screenshot-screen; }
     Alt+XF86Launch1 { screenshot-window; }
