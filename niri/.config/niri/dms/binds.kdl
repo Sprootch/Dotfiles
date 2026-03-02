@@ -8,7 +8,7 @@ binds {
     Mod+Shift+B hotkey-overlay-title="Open Terminal" { spawn "brave"; }
     Mod+Shift+D hotkey-overlay-title="wlr-which-key" { spawn "wlr-which-key"; }
     Mod+Shift+Y hotkey-overlay-title="yazi" { spawn "kitty" "-e" "yazi"; }
-    Mod+Shift+A hotkey-overlay-title="Animated wallpapers" { spawn "/home/lapin/w_pick.sh"; }
+    Mod+Shift+A hotkey-overlay-title="Animated wallpapers" { spawn "/home/lapin/Vidéos/AnimatedWallpapers/wallpaper_fuzzel_pick.sh"; }
 
     //Mod+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
     Mod+Return hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
