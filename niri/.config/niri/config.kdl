@@ -273,7 +273,9 @@ recent-windows {
 }
 
 // Startup 
-spawn-sh-at-startup "/home/lapin/Vidéos/AnimatedWallpapers/wallpaper_set.sh"
+spawn-sh-at-startup "/home/lapin/Vidéos/AnimatedWallpapers/wallpaper_start.sh"
+spawn-at-startup "vicinae" "server"
+//spawn-at-startup "arch-update" "--tray" "--enable"
 
 // Include dms files
 include "dms/colors.kdl"
