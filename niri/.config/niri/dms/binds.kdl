@@ -9,6 +9,7 @@ binds {
     Mod+Shift+D hotkey-overlay-title="wlr-which-key" { spawn "wlr-which-key"; }
     Mod+Shift+Y hotkey-overlay-title="yazi" { spawn "kitty" "-e" "yazi"; }
     Mod+P { spawn "vicinae" "vicinae://extensions/vdelcoigne/mpvpaper/mpv"; }
+    Mod+Shift+O hotkey-overlay-title="Wallpaper carousel" { spawn "dms" "ipc" "wallpaperCarousel" "toggle"; }
     Mod+O hotkey-overlay-title="Wallpaper picker" { spawn "qs" "-p" "/home/lapin/Vidéos/AnimatedWallpapers/wallpaper_picker.qml"; }
     Mod+A { spawn "dms" "ipc" "call" "plugins" "toggle" "aiAssistant"; }
 
@@ -209,7 +210,8 @@ binds {
     Mod+BracketRight { consume-or-expel-window-right; }
     Mod+Period { expel-window-from-column; }
 
-    // === Sizing & Layout ===
+    // === Sizing & Layout === 
+    Mod+S { set-column-width "50%"; }
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
