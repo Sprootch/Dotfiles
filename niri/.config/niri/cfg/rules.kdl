@@ -1,35 +1,35 @@
 
     window-rule {
-        geometry-corner-radius 20 // Set every window radius to 20
-        clip-to-geometry true
-    }
+    geometry-corner-radius 20 // Set every window radius to 20
+    clip-to-geometry true
+}
 
     layer-rule {
         match namespace="^mpvpaper*"
         place-within-backdrop true
-    }
+}
     
     window-rule {
       match app-id="brave-browser"
       open-maximized true
-    }
+}
 
     window-rule {
       match app-id="jetbrains-rider"
       open-maximized true
-    }
+}
 
     window-rule {
       match app-id="Ledger Wallet"
       open-maximized true
-    }
+}
 
     window-rule {
       match app-id="localsend"
       open-floating true
       default-column-width { proportion 0.5; }
       default-window-height { fixed 650; }
-    }
+}
 
 
     /*window-rule {
@@ -42,5 +42,5 @@
         //lid-close { spawn "notify-send" "The laptop lid is closed!"; }
         //lid-open { spawn "notify-send" "The laptop lid is open!"; }
         lid-close { spawn "bash" "-c" "qs -c noctalia-shell ipc call lockScreen lock"; }
-    }
+}
 

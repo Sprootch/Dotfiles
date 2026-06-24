@@ -9,30 +9,30 @@ binds {
     Mod+Shift+ESCAPE                     { show-hotkey-overlay; }
 
     // ─── Applications ───
-    Mod+Return                          hotkey-overlay-title="Open Terminal: Alacritty" { spawn "alacritty"; }
-    Mod+Space                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    Mod+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
-    Mod+Shift+Q                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+    Mod+Return hotkey-overlay-title="Open Terminal: Kitty" { spawn "kitty"; }
+    Mod+Space hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    Mod+ALT+L hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    Mod+Shift+Q hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
     // Browser
-    Mod+Shift+B                         hotkey-overlay-title="Open Browser: brave" { spawn "brave"; }
+    Mod+Shift+B hotkey-overlay-title="Open Browser: zen" { spawn "zen-browser"; }
     // Explorer
-    Mod+Shift+E                         hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
+    Mod+Shift+E hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
     // Yazi
-    Mod+Shift+F                         hotkey-overlay-title="Open Yazi" { spawn-sh "alacritty -e /usr/bin/yazi"; }
+    Mod+Shift+F hotkey-overlay-title="Open Yazi" { spawn-sh "kitty -e /usr/bin/yazi"; }
     // Btop
-    Mod+Shift+A                         hotkey-overlay-title="Open Btop" { spawn-sh "alacritty -e /usr/bin/btop"; }
+    Mod+Shift+A hotkey-overlay-title="Open Btop" { spawn-sh "kitty -e /usr/bin/btop"; }
     // Spotify
-    Mod+Shift+M                         hotkey-overlay-title="Open Spotify" { spawn "spotify"; }
+    Mod+Shift+M hotkey-overlay-title="Open Spotify" { spawn "spotify"; }
 
     // ─── Audio Controls ───
-    XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
-    XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
-    XF86AudioMute                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
-    XF86AudioMicMute                    allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
+    XF86AudioMute allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+    XF86AudioMicMute allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
 
     // Clipboard manager
-    Mod+V                               { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard" ;}
+    Mod+V                               { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
 
     // ─── Window Movement and Focus ───
     Mod+W                               { close-window; }
@@ -76,10 +76,10 @@ binds {
     Mod+Shift+CTRL+Down                 { move-column-to-monitor-down; }
 
     // ─── Workspace Switching ───
-    Mod+WheelScrollDown                 cooldown-ms=150 { focus-workspace-down; }
-    Mod+WheelScrollUp                   cooldown-ms=150 { focus-workspace-up; }
-    Mod+CTRL+WheelScrollDown            cooldown-ms=150 { move-column-to-workspace-down; }
-    Mod+CTRL+WheelScrollUp              cooldown-ms=150 { move-column-to-workspace-up; }
+    Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }
+    Mod+CTRL+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
+    Mod+CTRL+WheelScrollUp cooldown-ms=150 { move-column-to-workspace-up; }
 
     Mod+WheelScrollRight                { focus-column-right; }
     Mod+WheelScrollLeft                 { focus-column-left; }
@@ -119,13 +119,14 @@ binds {
     Mod+C                               { center-column; }
     Mod+CTRL+C                          { center-visible-columns; }
     Mod+parenright                      { set-column-width "-10%"; }
+    Mod+S                               { set-column-width "50%"; }
     Mod+Minus                           { set-column-width "+10%"; }
     Mod+Shift+parenright                { set-window-height "-10%"; }
     Mod+Shift+Minus                     { set-window-height "+10%"; }
 
     // ─── Modes ───
     Mod+T                               { toggle-window-floating; }
-    Mod+F                               { fullscreen-window; }
+    Mod+F                               { maximize-column; }
     Mod+Q                               { toggle-column-tabbed-display; }
 
     // ─── Screenshots ───
@@ -136,10 +137,12 @@ binds {
     // ─── Emergency Escape Key ───
     // Use this when a fullscreen app blocks your keybinds.
     // It disables any active keyboard shortcut inhibitor, restoring control.
-    Mod+ESCAPE                          allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+    Mod+ESCAPE allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // ─── Exit / Power ───
-    CTRL+ALT+Delete                     { quit; } // Also quits Niri
-    Mod+Shift+P                         { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
-    Mod+O                               repeat=false { toggle-overview; }
+    CTRL+ALT+Delete                     { quit; }
+ // Also quits Niri
+    Mod+Shift+P                         { power-off-monitors; }
+ // Turn off screens (useful for OLED or privacy)
+    Mod+O repeat=false { toggle-overview; }
 }
